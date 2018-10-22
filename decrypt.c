@@ -28,16 +28,16 @@ int main(int argc, char** argv) {
   char *b64 = b64_decode(&ciphertext, 128);
 
   for (i=0; i<128; i++) {
-    char stage0 = func0_encr(b64[i]);
-    char stage1 = func1_encr(stage0);
-    char stage2 = func2_encr(stage1);
-    char stage3 = func3_encr(stage2);
-    char stage4 = func4_encr(stage3);
-    char stage5 = func5_encr(stage4);
-    char stage6 = func6_encr(stage5);
-    char stage7 = func7_encr(stage6);
-    char stage8 = func8_encr(stage7);
-    char stage9 = func9_encr(stage8);
+    char stage0 = func0_decr(b64[i]);
+    char stage1 = func1_decr(stage0);
+    char stage2 = func2_decr(stage1);
+    char stage3 = func3_decr(stage2);
+    char stage4 = func4_decr(stage3);
+    char stage5 = func5_decr(stage4);
+    char stage6 = func6_decr(stage5);
+    char stage7 = func7_decr(stage6);
+    char stage8 = func8_decr(stage7);
+    char stage9 = func9_decr(stage8);
     plaintext[i] = stage9;
   }
 
