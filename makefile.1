@@ -1,0 +1,10 @@
+all: encrypt decrypt
+
+encrypt:
+	gcc -o encrypt encrypt.c encode.c func*.c
+
+decrypt:
+	gcc -o decrypt decrypt.c decode.c func*.c
+
+clean:
+	rm encrypt decrypt

@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -Wall -O2
+SRC = $(wildcard func*.c)
+OBJS = $(shell echo $(SRC) | tr .c .o)
+
+all: encrypt decrypt
+
+encrypt: encrypt.o encode.o $(OBJS)
+	$(CC) -o $@ $^
+
+decrypt: decrypt.o decode.o $(OBJS)
+	$(CC) -o $@ $^
+
+clean:
+	rm encrypt decrypt *.o

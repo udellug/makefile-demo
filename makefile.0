@@ -1,0 +1,8 @@
+all: encrypt decrypt
+
+encrypt:
+	gcc -o encrypt encrypt.c encode.c func0.c func1.c func2.c func3.c func4.c func5.c func6.c func7.c func8.c func9.c
+
+decrypt:
+	gcc -o decrypt decrypt.c decode.c func0.c func1.c func2.c func3.c func4.c func5.c func6.c func7.c func8.c func9.c
+

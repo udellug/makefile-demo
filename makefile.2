@@ -1,0 +1,13 @@
+CC = gcc
+CFLAGS = -Wall -O2
+
+all: encrypt decrypt
+
+encrypt:
+	$(CC) -o $@ encrypt.c encode.c func*.c
+
+decrypt:
+	$(CC) -o $@ decrypt.c decode.c func*.c
+
+clean:
+	rm encrypt decrypt
